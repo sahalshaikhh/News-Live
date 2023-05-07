@@ -1,0 +1,204 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #fff;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-logo img {
+  height: 50px;
+}
+
+.navbar-menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-menu li {
+  margin-right: 20px;
+}
+
+.navbar-menu li:last-child {
+  margin-right: 0;
+}
+
+.navbar-menu a {
+  display: block;
+  padding: 10px;
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar-menu a:hover {
+  color: #007bff;
+}
+
+.navbar-toggle {
+  display: none;
+  cursor: pointer;
+}
+
+.navbar-toggle span {
+  display: block;
+  width: 30px;
+  height: 3px;
+  background-color: #333;
+  margin: 5px 0;
+}
+
+.Image-hover:hover img {
+  transition: all 0.5s ease-in-out;
+  transform: scale(1.1);
+  overflow: hidden;
+}
+.knowMore > button {
+  text-align: center;
+  border: 1px solid rgba(187, 185, 185, 0.552);
+  box-shadow: 2px 2px 2px gray;
+}
+
+.knowMore:hover > button {
+  background-color: rgba(42, 42, 42, 0.679);
+  color: aliceblue;
+  box-shadow: none;
+}
+
+.nextBtn:hover {
+  text-shadow: 2px 2px 2px black;
+}
+
+@media (max-width: 768px) {
+  .navbar-menu {
+    display: none;
+  }
+
+  .navbar-toggle {
+    display: block;
+  }
+
+  .navbar-toggle.active span:first-child {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .navbar-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .navbar-toggle.active span:last-child {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+  .navbar-toggle.active ~ .navbar-menu {
+    display: block;
+    text-align: center;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+  }
+
+  .navbar-menu li {
+    display: block;
+    margin-right: 0;
+  }
+}
+
+/* Footer */
+/* Footer Styles */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 50px 0;
+}
+
+footer h4 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+footer p {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+footer ul li {
+  margin-bottom: 10px;
+}
+
+footer ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer ul li a:hover {
+  color: #ccc;
+}
+
+footer form {
+  margin-top: 20px;
+}
+
+footer .form-group {
+  margin-bottom: 10px;
+}
+
+footer .form-control {
+  background-color: transparent;
+  border-color: #fff;
+  color: #fff;
+}
+
+footer .btn-primary {
+  background-color: #fff;
+  border-color: #fff;
+  color: #333;
+}
+
+footer .social-links {
+  margin-top: 20px;
+}
+
+footer .social-links a {
+  display: inline-block;
+  margin-right: 10px;
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+footer .social-links a:hover {
+  background-color: #ccc;
+  color: #fff;
+}
